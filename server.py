@@ -4,9 +4,23 @@ import json
 import urllib.parse
 from web_agent import execute_app
 
-PORT = 8000
+import os
+
+PORT = int(os.environ.get("PORT", 8000))
 
 class APIRequestHandler(http.server.SimpleHTTPRequestHandler):
+    def end_headers(self):
+        # Add CORS headers to all responses
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+        super().end_headers()
+
+    def do_OPTIONS(self):
+        # Preflight request handling for CORS
+        self.send_response(200)
+        self.end_headers()
+
     def do_POST(self):
         if self.path == '/api/execute':
             content_length = int(self.headers['Content-Length'])
