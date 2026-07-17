@@ -1,4 +1,4 @@
-# Composio Toolkit Parity — Research & Execution Agent
+# Composio Toolkit Parity ( Research & Execution Agent )
 
 1. It is a research pipeline that scores 100 apps in the list using AI-agent "buildability": auth method, self-serve vs gated, API surface, existing MCP, and a verdict.
 2. Then verifies its own output against a risk-weighted sample. Includes a live LangGraph execution agent that calls Composio-powered tools for each app.
