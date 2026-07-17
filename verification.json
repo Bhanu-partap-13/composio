@@ -1,0 +1,142 @@
+[
+    {
+        "app": "DealCloud",
+        "first_pass": "OAuth2, likely self-serve trial",
+        "verified": "OAuth2 client-credentials; GATED - needs existing admin-provisioned account; MCP server just announced (Jul 2026)",
+        "result": "corrected",
+        "note": "First pass missed the gating + brand-new MCP announcement, only found via live docs."
+    },
+    {
+        "app": "Pylon",
+        "first_pass": "OAuth2, unclear gating",
+        "verified": "Bearer API token (admin-generated), self-serve within a paid workspace, has official MCP",
+        "result": "corrected",
+        "note": "Auth method was wrong (guessed OAuth2, actually static bearer token)."
+    },
+    {
+        "app": "MrScraper",
+        "first_pass": "API key, unsure about MCP",
+        "verified": "Bearer token confirmed, free no-CC trial confirmed, official MCP server confirmed",
+        "result": "confirmed + detail added",
+        "note": "Core guess was right; MCP existence only confirmed via docs."
+    },
+    {
+        "app": "Ahrefs",
+        "first_pass": "API key, assumed self-serve like most SEO tools",
+        "verified": "API key confirmed, but GATED - Enterprise-plan-only add-on",
+        "result": "corrected",
+        "note": "Wrong on gating - this was a real miss the first pass would have shipped."
+    },
+    {
+        "app": "LinkedIn Ads",
+        "first_pass": "OAuth2, assumed self-serve like Google/Meta Ads",
+        "verified": "OAuth2 confirmed, but GATED - requires formal Marketing Developer Platform partner approval",
+        "result": "corrected",
+        "note": "Assumed parity with Google/Meta Ads; LinkedIn is stricter."
+    },
+    {
+        "app": "Waterfall.io",
+        "first_pass": "Assumed a documented REST API existed",
+        "verified": "No public API docs discoverable at all - flagged low-confidence, contact-sales only",
+        "result": "corrected to 'unverified'",
+        "note": "Honest miss: no public reference found even after searching; downgraded confidence rather than guessing."
+    },
+    {
+        "app": "Stripe",
+        "first_pass": "API key + OAuth2 Connect, self-serve, official MCP",
+        "verified": "Same",
+        "result": "confirmed",
+        "note": "No change - well-documented API, first pass was already accurate."
+    },
+    {
+        "app": "Slack",
+        "first_pass": "OAuth2, self-serve, official MCP",
+        "verified": "Same",
+        "result": "confirmed",
+        "note": "No change."
+    },
+    {
+        "app": "GitHub",
+        "first_pass": "OAuth2 + PAT, self-serve, official MCP",
+        "verified": "Same",
+        "result": "confirmed",
+        "note": "No change."
+    },
+    {
+        "app": "Twenty",
+        "first_pass": "Assumed OAuth2 only, cloud-only",
+        "verified": "API key for self-hosted + OAuth2 for cloud - both paths exist",
+        "result": "corrected",
+        "note": "Missed the self-hosted API-key path on first pass."
+    },
+    {
+        "app": "Threads (Meta)",
+        "first_pass": "Assumed same open access as Instagram Graph API",
+        "verified": "Narrower API, most write scopes need App Review",
+        "result": "corrected",
+        "note": "Overestimated parity with sibling Meta products."
+    },
+    {
+        "app": "Amazon Selling Partner",
+        "first_pass": "OAuth2, thought basic read access was open",
+        "verified": "OAuth2 (LWA) + AWS SigV4, gated per-role approval even for read scopes",
+        "result": "corrected",
+        "note": "Signing requirement (SigV4) was missed entirely on first pass."
+    },
+    {
+        "app": "fanbasis",
+        "first_pass": "Guessed API key, self-serve",
+        "verified": "No public developer docs found - flagged low-confidence",
+        "result": "corrected to 'unverified'",
+        "note": "First pass would have fabricated a plausible-sounding but unverifiable answer."
+    },
+    {
+        "app": "Otter AI",
+        "first_pass": "Assumed a public REST API existed",
+        "verified": "Primary access path is an official MCP server, not a standalone public REST doc set",
+        "result": "corrected",
+        "note": "MCP-first distribution model wasn't obvious without checking."
+    },
+    {
+        "app": "Klaviyo",
+        "first_pass": "API key, self-serve, broad REST",
+        "verified": "Same, plus confirmed official MCP server exists",
+        "result": "confirmed + detail added",
+        "note": "Core facts right, MCP detail added."
+    },
+    {
+        "app": "Sherlock",
+        "first_pass": "Assumed it exposed some API since it's a 'tool'",
+        "verified": "It's a local CLI with no hosted API or auth at all",
+        "result": "corrected",
+        "note": "Category mismatch - not a SaaS API, needs to be wrapped as a CLI skill instead."
+    },
+    {
+        "app": "Gladly",
+        "first_pass": "Assumed self-serve trial like Zendesk/Intercom",
+        "verified": "No public self-serve signup found - enterprise sales-led onboarding",
+        "result": "corrected",
+        "note": "Wrongly assumed parity with the rest of the helpdesk category."
+    },
+    {
+        "app": "Consensus",
+        "first_pass": "Assumed OAuth2 self-serve app registration",
+        "verified": "OAuth2 access is request-based, not instant self-serve",
+        "result": "corrected",
+        "note": "'OAuth2 requested' language in the brief was a hint we confirmed rather than assumed."
+    },
+    {
+        "app": "Notion",
+        "first_pass": "OAuth2 + internal token, self-serve, official MCP",
+        "verified": "Same",
+        "result": "confirmed",
+        "note": "No change."
+    },
+    {
+        "app": "QuickBooks",
+        "first_pass": "OAuth2, self-serve sandbox",
+        "verified": "Same",
+        "result": "confirmed",
+        "note": "No change."
+    }
+]

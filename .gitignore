@@ -1,0 +1,23 @@
+# Dependency directories
+node_modules/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments and Secrets
+.env
+.env.*
+!.env.example
+*.pem
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.suo
+
+# System files
+.DS_Store
+Thumbs.db
